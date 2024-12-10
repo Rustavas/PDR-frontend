@@ -1,0 +1,52 @@
+/* src/app/trafficLightLoader/TrafficLightLoader.css */
+.traffic-light-loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px; /* Увеличьте ширину */
+  height: 220px; /* Увеличьте высоту */
+  background-color: #333;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Тень для эффекта */
+}
+
+.light {
+  width: 60px; /* Увеличьте ширину светового сигнала */
+  height: 60px; /* Увеличьте высоту светового сигнала */
+  border-radius: 50%; /* Сделать круглым */
+  margin: 5px 0;
+  background-color: #555; /* Цвет по умолчанию */
+  transition:
+    background-color 0.5s,
+    transform 0.5s; /* Плавный переход цвета и размера */
+  position: relative; /* Для позиционирования тени */
+}
+
+.red.active {
+  background-color: red;
+  transform: scale(1.1); /* Увеличение размера активного сигнала */
+}
+
+.yellow.active {
+  background-color: yellow;
+  transform: scale(1.1); /* Увеличение размера активного сигнала */
+}
+
+.green.active {
+  background-color: green;
+  transform: scale(1.1); /* Увеличение размера активного сигнала */
+}
+
+/* Эффект тени для световых сигналов */
+.light.active::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+  opacity: 0.5; /* Полупрозрачность для эффекта света */
+}

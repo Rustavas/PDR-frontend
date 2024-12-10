@@ -1,7 +1,11 @@
-import React from "react";
+import React from 'react';
+
+import TypesOfTests from '../../components/TypesOfTests.jsx';
 
 export default function TestsPage({}) {
   return (
-    <div>Tests page</div>
+    <div>
+      <TypesOfTests />
+    </div>
   );
-};
+}

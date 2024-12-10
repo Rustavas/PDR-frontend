@@ -1,7 +1,10 @@
-import React from "react";
+import React from 'react';
+import TitlesOfSectionsRules from '../../components/TitlesOfSectionsRules.jsx';
 
 export default function Page() {
   return (
-    <div>Rules page</div>
+    <div>
+      <TitlesOfSectionsRules />
+    </div>
   );
-};
+}
